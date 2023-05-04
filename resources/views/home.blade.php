@@ -11,7 +11,11 @@
             <div class="row">
                 @foreach ($movies as $movie)
                     <div class="col-4">
-                        <h3>{{$movie->title}}</h3>
+                        <a href="{{route('details', $movie->id)}}">
+                            <h3>{{$movie->title}}</h3>
+                        </a>
+                        <h3>Nationality: {{$movie->nationality}}</h3>
+                        <h3>Vote: {{$movie->vote}}</h3>
                     </div>
                 @endforeach
             </div>
