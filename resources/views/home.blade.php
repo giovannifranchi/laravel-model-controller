@@ -8,7 +8,13 @@
     </head>
     <body>
         <div class="container">
-            <h1>Template Laravel</h1>
+            <div class="row">
+                @foreach ($movies as $movie)
+                    <div class="col-4">
+                        <h3>{{$movie->title}}</h3>
+                    </div>
+                @endforeach
+            </div>
         </div>
 
     </body>
